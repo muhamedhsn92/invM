@@ -9,611 +9,511 @@
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-
-
+  <link rel="stylesheet" type="text/css" href="./css/jquery.dataTables.css">
 </head>
 
 <body>
+  <nav class="text-right navbar navbar-expand-lg text-white bg-dark navbar-light bg-light">
+    <a class="navbar-brand text-white" href="#">أنظمة المخازن</a>
+    <div class="collapse navbar-collapse d-flex " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <img src="./img/id.jpeg" class="rounded-circle" style="transform: scale(1.2)" width="50px" height="50px" alt="">
+            <!-- <span>
+              <i class=" fa fa-user  faenv  fa-1x p-2 text-dark rounded-circle " style="background: rgb(0, 204, 255)"></i>
+            </span> -->
+          </a>
+          <div class="dropdown-menu mt-2 text-center" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"> إعدادات </a>
+            <a class="dropdown-item" href="./login.html">تسجيل الخروج </a>
 
-  <!-- <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3  h-100" id="sidenav">
-        <button class="btn btn-primary "> sideNav</button>
-      </div>
-      <div class="  h-100 text-center" id="mainMenu">
-        <h2>Main Content</h2>
-        <button onclick="navclick()" class="btn">
-          toggle
-        </button>
-      </div>
-    </div>
-  </div> -->
 
-
-  <body>
-    <!-- <div id="topNav" style="display: flex;flex-direction: row-reverse ;
-    background:rgb(159, 192, 110);
-    padding-right: 50px;">
-      <ul>
-        <li><a href="#"> first</a></li>
-        <li><a href="#"> first</a></li>
-        <li><a href="#"> first</a></li>
-        <li><a href="#"> first</a></li>
+          </div>
+        </li>
       </ul>
-      <div><span><i class="fas fa-user-alt"></i></span></div>
-    </div> -->
-    <!-- bootstrap navBar -->
-    <nav class="text-right navbar navbar-expand-lg text-white bg-dark navbar-light bg-light">
+    </div>
+  </nav>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand text-white" href="#">أنظمة المخازن</a>
 
-      <div class="collapse navbar-collapse d-flex " id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a class="nav-link " href="#">
-              <span>
-                <i onclick="overlayShow()" class="fa  fa-user faenv fa-1x p-3 rounded-circle text-dark" style="background: rgb(0, 204, 255);"></i>
-              </span>
+
+  <div id="wrapper" style="direction: rtl;text-align: right">
+    <!-- Sidebar -->
+
+    <style type="text/css">
+      @import url("sidebar-menu.css");
+      @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+    </style>
+    <div id="sidebar-wrapper">
+      <section style="width: 100%">
+        <ul class="sidebar-menu">
+          <!-- <li class="header">MAIN NAVIGATION</li> -->
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-user"></i>
+              <span>البيانات الاساسيه </span>
+              <i class="fa fa-angle-left pull-right"></i>
             </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="./About.html">
+                  <i class="fa fa-circle-o"></i> الاصناف</a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> العملات </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> مجموعات الاصناف </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> بيانات الاصناف </a>
+              </li>
+            </ul>
           </li>
-          <!-- <li class="nav-item">
-        <a class="nav-link" href="About.html">About</a>
-      </li> -->
+
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-share"></i>
+              <span> الخيوط</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> المراحل
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> مرحله أولي</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> مرحله ثانيه </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> الفواتير </a>
+                  </li>
+                  <li>
+
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> التقارير
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> الجرد </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> تقرير 1 </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> تقرير 2 </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> تقرير 3 </a>
+                  </li>
+                  <li>
+
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-share"></i>
+              <span> البلاستيك</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> الفاتوره
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+
+
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> التقارير
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> الجرد </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> تقرير 1 </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> تقرير 2 </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> تقرير 3 </a>
+                  </li>
+                  <li>
+
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-share"></i>
+              <span> الالومونيوم</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> فاتوره
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> التقارير
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> الجرد </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> تقرير 1 </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> تقرير 2 </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-circle-o"></i> تقرير 3 </a>
+                  </li>
+                  <li>
+
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+
+
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-user"></i>
+              <span> الاعدادات </span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> إضافه مستخدم </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o"></i> أخري </a>
+              </li>
+
+            </ul>
+          </li>
+
         </ul>
-      </div>
-    </nav>
-
-
-<div class="overlay1 hinze">
-      <img src="./img/iphone.jpeg" class="rounded-circle" width="80px" height="80px" alt="">
-      <h5>الاسم</h5>
-      <h6>الوظيفه</h6>
-      <a class="btn btn-primary" href="logout.html">Log out </a>
+      </section>
 
     </div>
-    <!-- end of navbar -->
 
-    <div id="wrapper" style="direction: rtl;text-align: right">
-      <!-- Sidebar -->
-
-      <style type="text/css">
-        @import url("sidebar-menu.css");
-        @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
-      </style>
-      <div id="sidebar-wrapper">
-        <!-- <ul class="sidebar-nav">
-          <li>
-            <a href="./index.html">مخزن البلاستيك </a>
-          </li>
-          <li>
-            <a href="./About.html">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul> -->
-
-        <section style="width: 100%">
-          <ul class="sidebar-menu">
-            <!-- <li class="header">MAIN NAVIGATION</li> -->
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-user"></i>
-                <span>البيانات الاساسيه </span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li>
-<a href="./About.html">
-                    <i class="fa fa-circle-o"></i> بيانات المخازن</a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> العملات </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> المنتجات </a>
-                </li>
-              </ul>
-            </li>
-
-
-
-            <!-- <li class="treeview">
-      <a href="#">
-        <i class="fa fa-pie-chart"></i>
-        <span>Charts</span>
-        <i class="fa fa-angle-left pull-right"></i>
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+  <div class="row">
+    <div class="col-md-1">
+      <a href="#" id="menu-toggle">
+        <span>
+          <i class="fas fa-bars"></i>
+        </span>
       </a>
-      <ul class="treeview-menu">
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> ChartJS</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Morris</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Flot</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Inline charts</a>
-        </li>
-      </ul>
-    </li>
-    <li class="treeview">
-      <a href="#">
-        <i class="fa fa-laptop"></i>
-        <span>UI Elements</span>
-        <i class="fa fa-angle-left pull-right"></i>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> General</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Icons</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Buttons</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Sliders</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Timeline</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Modals</a>
-        </li>
-      </ul>
-    </li>
-    <li class="treeview">
-      <a href="#">
-        <i class="fa fa-edit"></i>
-        <span>Forms</span>
-        <i class="fa fa-angle-left pull-right"></i>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> General Elements</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Advanced Elements</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Editors</a>
-        </li>
-      </ul>
-    </li>
-    <li class="treeview">
-      <a href="#">
-        <i class="fa fa-table"></i>
-        <span>Tables</span>
-        <i class="fa fa-angle-left pull-right"></i>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Simple tables</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Data tables</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-calendar"></i>
-        <span>Calendar</span>
-        <small class="label pull-right label-danger">3</small>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-envelope"></i>
-        <span>Mailbox</span>
-        <small class="label pull-right label-warning">12</small>
-      </a>
-    </li>
-    <li class="treeview">
-      <a href="#">
-        <i class="fa fa-folder"></i>
-        <span>Examples</span>
-        <i class="fa fa-angle-left pull-right"></i>
-      </a>
-      <ul class="treeview-menu">
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Invoice</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Profile</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Login</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Register</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Lockscreen</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> 404 Error</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> 500 Error</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Blank Page</a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-circle-o"></i> Pace Page</a>
-        </li>
-      </ul>
-    </li> -->
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-share"></i>
-                <span>مخزن البلاستيك</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
+    </div>
+    <div class="col-md-2 m-auto">
+      <h2 class="text-center mb-3 pt-2 pb-2" style="background: rgb(255, 208, 121); border-radius: 30%">الأصناف</h2>
+    </div>
+  </div>
 
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> الحركات
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> أمر اضافه</a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> أمر صرف </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> الفواتير </a>
-                    </li>
-                    <li>
+            <div class="col-md-10 m-auto p-2" style="border:2px solid rgb(201, 199, 199);border-radius: 10px;">
+              <form class="mb-1">
+                <div class="row ">
+                  <div class="col" style="width: 100px !important">
+                    <label>إسم الصنف
+                      <input type="text" class="form-control">
+                    </label>
+                  </div>
+                  <div class="col">
+                    <label>كود الصنف
+                      <input type="text" class="form-control">
+                    </label>
+                  </div>
+                  <div class="col">
 
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> التقارير
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> تقرير 1 </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> تقرير 2 </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> تقرير 3 </a>
-                    </li>
-                    <li>
+                    <button class="btn btn-primary" style="cursor: pointer; float:right;
+      margin-top: 24px;">Search
 
-                    </li>
-                  </ul>
-                </li>
+                      <span>
+                        <i class="fa fa-search"></i>
+                      </span>
+                    </button>
+                  </div>
 
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-share"></i>
-                <span>مخزن الخيوط</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
+                </div>
+              </form>
 
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> الحركات
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> أمر اضافه</a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> أمر صرف </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> الفواتير </a>
-                    </li>
-                    <li>
-
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> التقارير
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> تقرير 1 </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> تقرير 2 </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> تقرير 3 </a>
-                    </li>
-                    <li>
-
-                    </li>
-                  </ul>
-                </li>
-
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-share"></i>
-                <span>مخزن أخر</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> الحركات
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> أمر اضافه</a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> أمر صرف </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> الفواتير </a>
-                    </li>
-                    <li>
-
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> التقارير
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> تقرير 1 </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> تقرير 2 </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-circle-o"></i> تقرير 3 </a>
-                    </li>
-                    <li>
-
-                    </li>
-                  </ul>
-                </li>
-
-              </ul>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa fa-book"></i>
-                <span>Documentation</span>
-              </a>
-            </li>
-            <li class="header">LABELS</li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-user"></i>
-                <span> إعدادات الامان </span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> إضافه مستخدم </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> أخري </a>
-                </li>
-
-              </ul>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa fa-circle-o text-yellow"></i>
-                <span>Warning</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa fa-circle-o text-aqua"></i>
-                <span>Information</span>
-              </a>
-            </li>
-          </ul>
-        </section>
-
-      </div>
-
-      <!-- Page Content -->
-      <div id="page-content-wrapper">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <a href="#" id="menu-toggle">
-                <span>
-                  <i class="fas fa-bars"></i>
-                </span>
-              </a>
-              <h1 class="text-center">Bootstrap Sidebar</h1>
-              <h2 class="small text-center">Second Header</h2>
-              <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium perferendis maiores velit ad id delectus
-                nisi eligendi doloremque officia necessitatibus, repellendus alias omnis, natus nam voluptates dolor vel
-                minus ab?
-              </p>
             </div>
 
-            <div class="col-md-10 m-auto">
+          </div>
 
-              <table id="table_id" class="display" data-order='[[ 1, "asc" ]]' data-page-length='25'>
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th data-class-name="priority">Salary</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Row 1 Data 2</td>
-                    <td>Row 1 Data 2</td>
-                    <td>Row 1 Data 2</td>
-                    <td>Row 1 Data 2</td>
-                    <td>2000</td>
-                  </tr>
-                  <tr>
-                    <td>Row 2 Data 1</td>
-                    <td>Row 2 Data 2</td>
-                    <td>Row 2 Data 2</td>
-                    <td>Row 2 Data 2</td>
-                    <td>Row 2 Data 2</td>
-                    <td>5000 </td>
-                  </tr>
+          <div class="col-md-10 m-auto">
 
-                </tbody>
-              </table>
-            </div>
+<table id="table_id" class="display table table-hover table-bordered justify-content-center" data-order='[[ 1, "asc" ]]' data-page-length='25'>
+              <thead style="background: gray;">
+                <tr>
+                  <th>إسم المنتج</th>
+                  <th>الكميه</th>
+                  <th>تاريخ الدخول </th>
+                  <th>المتبقي</th>
+                  <th data-class-name="priority">السعر</th>
+
+                  <th>تعديل</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Row 1 Data 1</td>
+                  <td>Row 1 Data 2</td>
+                  <td>Row 1 Data 2</td>
+                  <td>Row 1 Data 2</td>
+                  <td>2000</td>
+                  <td>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-gear fa-2x " style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-pencil fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-user fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Row 1 magdy 1</td>
+                  <td>Row 1 Data 2</td>
+                  <td>Row 1 Data 2</td>
+                  <td>Row 1 Data 2</td>
+                  <td>4300</td>
+                  <td>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-gear fa-2x " style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-pencil fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-user fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Row 2 Data 1</td>
+                  <td>Row 2 Data 2</td>
+                  <td>Row 2 Data 2</td>
+                  <td>Row 2 Data 2</td>
+                  <td>1900</td>
+                  <td>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-gear fa-2x " style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-pencil fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-user fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Row 2 Data 1</td>
+                  <td>Row 2 Data 2</td>
+                  <td>Row 2 Data 2</td>
+                  <td>Row 2 Data 2</td>
+                  <td>2700</td>
+                  <td>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-gear fa-2x " style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-pencil fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-user fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Row 2 Data 1</td>
+                  <td>Row 2 Data 2</td>
+                  <td>Row 2 Data 2</td>
+                  <td>Row 2 Data 2</td>
+                  <td>5000</td>
+                  <td>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-gear fa-2x " style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-pencil fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                    <a class="pl-2">
+                      <span>
+                        <i class="fa fa-user fa-2x" style="cursor: pointer;"></i>
+                      </span>
+                    </a>
+                  </td>
+                </tr>
+              
+
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
 
-  </body>
+</body>
 
 
-  <script src="js/popper.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="./sidebar-menu.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="./sidebar-menu.js"></script>
+<script type="text/javascript" charset="utf8" src="./js/jquery.dataTables.js"></script>
 
-  <script>
-    $.sidebarMenu($('.sidebar-menu'))
+<script>
+  $.sidebarMenu($('.sidebar-menu'))
 
 
-    $(document).ready(function () {
-      $('#table_id').DataTable({
-        paging: false,
-        colReorder: true,
-        autoFill: true
+  $(document).ready(function () {
+    $('#table_id').DataTable({
+      paging: false,
+      colReorder: true,
+      autoFill: true
 
-      });
     });
+  });
 
 
-    // menu script 
+  // menu script 
 
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-36251023-1']);
-    _gaq.push(['_setDomainName', 'jqueryscript.net']);
-    _gaq.push(['_trackPageview']);
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
 
-    (function () {
-      var ga = document.createElement('script');
-      ga.type = 'text/javascript';
-      ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
-        '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(ga, s);
-    })();
+  (function () {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+      '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
 
-    function overlayShow() {
- $('.overlay1').toggleClass('hinze')
-    }
-    //     function navclick() {
-    //       console.log("clicked");
-    //       // $('.col-md-3').animate({width:'toggle'});
-    //       $('#sidenav').animate({marginLeft:'toggle'
-    //       }
+  function overlayShow() {
+    $('.overlay1').toggleClass('hinze')
+  }
+  //     function navclick() {
+  //       console.log("clicked");
+  //       // $('.col-md-3').animate({width:'toggle'});
+  //       $('#sidenav').animate({marginLeft:'toggle'
+  //       }
 
 
-    //       )
-    //  $('#mainMenu').toggleClass("col-md-9").toggleClass("col-md-12");
-    //       // $('#mainMenu').toggleClass('col-md-11');
-    //     }
-    $(document).ready(function () {
-      $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("menuDisplayed");
-      });
+  //       )
+  //  $('#mainMenu').toggleClass("col-md-9").toggleClass("col-md-12");
+  //       // $('#mainMenu').toggleClass('col-md-11');
+  //     }
+  $(document).ready(function () {
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("menuDisplayed");
     });
-  </script>
+  });
+</script>
 </body>
 
 </html>

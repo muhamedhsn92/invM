@@ -11,11 +11,23 @@
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./css/jquery.dataTables.css">
   <style>
-
   </style>
 </head>
 
 <body>
+<section id="loading">
+  <div class="cssload-thecube">
+    <div class="cssload-cube cssload-c1"></div>
+    <div class="cssload-cube cssload-c2"></div>
+    <div class="cssload-cube cssload-c4"></div>
+    <div class="cssload-cube cssload-c3"></div>
+  </div>
+</section>
+
+
+
+
+
   <nav class="text-right navbar navbar-expand-lg text-white bg-dark navbar-light bg-light">
     <a class="navbar-brand text-white" href="#">أنظمة المخازن</a>
     <div class="collapse navbar-collapse d-flex " id="navbarSupportedContent">
@@ -264,18 +276,18 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-  <div class="row">
-    <div class="col-md-1">
-      <a href="#" id="menu-toggle">
-        <span>
-          <i class="fas fa-bars"></i>
-        </span>
-      </a>
-    </div>
-    <div class="col-md-2 m-auto">
-      <h2 class="text-center mb-3 pt-2 pb-2" style="background: rgb(255, 208, 121); border-radius: 30%">الأصناف</h2>
-    </div>
-  </div>
+            <div class="row">
+              <div class="col-md-1">
+                <a href="#" id="menu-toggle">
+                  <span>
+                    <i class="fas fa-bars"></i>
+                  </span>
+                </a>
+              </div>
+              <div class="col-md-2 m-auto">
+                <h2 class="text-center mb-3 pt-2 pb-2" style="background: rgb(255, 208, 121); border-radius: 30%">الأصناف</h2>
+              </div>
+            </div>
 
             <div class="col-md-10 m-auto p-2" style="border:2px solid rgb(201, 199, 199);border-radius: 10px;">
               <form class="mb-1">
@@ -310,7 +322,8 @@
 
           <div class="col-md-10 m-auto">
 
-<table id="table_id" class="display table table-hover table-bordered justify-content-center" data-order='[[ 1, "asc" ]]' data-page-length='25'>
+            <table id="table_id" class="display table table-hover table-bordered justify-content-center" data-order='[[ 1, "asc" ]]'
+              data-page-length='25'>
               <thead style="background: gray;">
                 <tr>
                   <th>إسم المنتج</th>
@@ -443,7 +456,7 @@
                     </a>
                   </td>
                 </tr>
-              
+
 
               </tbody>
             </table>
@@ -468,12 +481,18 @@
   $.sidebarMenu($('.sidebar-menu'))
 
 
+  $.sidebarMenu($('.sidebar-menu')) ;
+
   $(document).ready(function () {
+    $("#loading .cssload-thecube").fadeOut(1000, function () {
+      $("#loading").fadeOut(500, function () {
+        $("body").css("overflow", "hidden");
+        $("#loading").remove();
+      })
+    });
     $('#table_id').DataTable({
-      // paging: false,
       colReorder: true,
       autoFill: true
-
     });
   });
 

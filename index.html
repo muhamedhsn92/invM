@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./css/jquery.dataTables.css">
+  <style>
+
+  </style>
 </head>
 
 <body>
@@ -27,7 +30,7 @@
           </a>
           <div class="dropdown-menu mt-2 text-center" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#"> إعدادات </a>
-            <a class="dropdown-item" href="./login.html">تسجيل الخروج </a>
+            <a class="dropdown-item" href="./pages/admin/login.html">تسجيل الخروج </a>
 
 
           </div>
@@ -42,7 +45,7 @@
     <!-- Sidebar -->
 
     <style type="text/css">
-      @import url("sidebar-menu.css");
+      @import url("./css/sidebar-menu.css");
       @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
     </style>
     <div id="sidebar-wrapper">
@@ -57,7 +60,7 @@
             </a>
             <ul class="treeview-menu">
               <li>
-                <a href="./About.html">
+                <a href="./pages/section1/About.html">
                   <i class="fa fa-circle-o"></i> الاصناف</a>
               </li>
               <li>
@@ -458,7 +461,7 @@
 <script src="js/popper.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="./sidebar-menu.js"></script>
+<script src="./js/sidebar-menu.js"></script>
 <script type="text/javascript" charset="utf8" src="./js/jquery.dataTables.js"></script>
 
 <script>
@@ -483,15 +486,15 @@
   _gaq.push(['_setDomainName', 'jqueryscript.net']);
   _gaq.push(['_trackPageview']);
 
-  (function () {
-    var ga = document.createElement('script');
-    ga.type = 'text/javascript';
-    ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
-      '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(ga, s);
-  })();
+  // (function () {
+  //   var ga = document.createElement('script');
+  //   ga.type = 'text/javascript';
+  //   ga.async = true;
+  //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+  //     '.google-analytics.com/ga.js';
+  //   var s = document.getElementsByTagName('script')[0];
+  //   s.parentNode.insertBefore(ga, s);
+  // })();
 
   function overlayShow() {
     $('.overlay1').toggleClass('hinze')
